@@ -8,10 +8,10 @@ using namespace std;
 
 // Comentarios iniciales de la función
 int factorial(int x) {
-	return 1;
+	if (x == 1) return 1;
+	return x * factorial(x-1);
 }
 
 TEST_CASE( "Name of the test", "[tags]" ) {
-	CHECK( factorial(2)  == 1);
-    CHECK( factorial(4)  == 24);
+	CHECK( factorial(4)  == 24);
 }
